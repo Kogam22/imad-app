@@ -6,7 +6,7 @@ button.onClick = function() {
   var request = new XMLhttpRequest();
   //Capture The Response And Store In HTML
   request.onreadystatechange = function() {
-      if (request.readyState === XMLHttpRequest.DONE) 
+      if (request.readyState === XMLhttpRequest.DONE) 
       {
           //Take Some Action
           if (httpRequest.status === 200) 
@@ -14,7 +14,6 @@ button.onClick = function() {
                 var counter= request.responseText; 
                 var span = document.getElementById("count");
                 span.innerHTML = counter.toString();
-                console.log("That Process Was Done Completely");
             } 
           else { alert('There was a problem with the request.'); }
       
@@ -25,4 +24,5 @@ button.onClick = function() {
   request.open('GET', 'http://kogam22.imad.hasura-app.io/counter', true);
   request.send(null);
 };
+
 
