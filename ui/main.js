@@ -11,7 +11,7 @@ button.oncLick = function() {
           //Take Some Action
           if (httpRequest.status === 200) 
             { 
-                var counter= request.responseText; alert(httpRequest.responseText); 
+                var counter= request.responseText; 
                 var span = document.getElementById("count");
                 span.innerHTML = counter.toString();
             } 
