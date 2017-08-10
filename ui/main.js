@@ -1,16 +1,27 @@
 //counter code
 var button = document.getElementById("counter");
-var counter = 0;
 button.oncLick = function() {
   
-  //Make A Request To Counter Endpoint
-  
+  //Create A Request To Counter Endpoint
+  var request = new XMLhttpRequest();
   //Capture The Response And Store In HTML
-  
-  //Render The Variable In The Correct Span
-  counter = counter + 1;
-  var span = document.getElementById("count");
-  span.innerHTML = counter.toString();
-    
+  request.onreadystatechange = function() {
+      if (request.readyState === XMLHttpRequest.DONE) 
+      {
+          //Take Some Action
+          if (httpRequest.status === 200) 
+            { 
+                var counter= request.responseText; alert(httpRequest.responseText); 
+                var span = document.getElementById("count");
+                span.innerHTML = counter.toString();
+            } 
+          else { alert('There was a problem with the request.'); }
+      
+      } 
+      
+  };
+  //Make A Request
+  request.open('GET', 'http://kogam22.imad.hasura-app.io/counter', true);
+  request.send(null);
 };
 
