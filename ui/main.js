@@ -1,7 +1,7 @@
 //counter code
 console.log("JS Loaded Successfully!");
 var button = document.getElementById("counter");
-console.log("counter Is Selected Now");
+console.log("\"counter\" Is Selected Now");
 button.onClick = function() {
   
   console.log("Button Was Clicked");
