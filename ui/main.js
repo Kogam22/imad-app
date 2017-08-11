@@ -21,7 +21,12 @@ button.onClick = function() {
                 span.innerHTML = counter.toString();
                 console.log("counter Was Sent To Span");
             } 
-          else { alert('There was a problem with the request.'); }
+          else 
+          { 
+              alert('There was a problem with the request.');
+              console.log("An Error Occurred.");
+              
+          }
       
       } 
       
