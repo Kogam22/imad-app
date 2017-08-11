@@ -18,6 +18,7 @@ button.onClick = function() {
                 console.log("Check If status Is Completed");
                 var counter= request.responseText; 
                 var span = document.getElementById("count");
+                counter = counter + 1;
                 span.innerHTML = counter.toString();
                 console.log("counter Was Sent To Span");
             } 
