@@ -24,7 +24,7 @@ button.onClick = function() {
           else 
           { 
               alert('There was a problem with the request.');
-              console.log("An Error Occurred.");
+              console.log("An Error Occurred With The Request.");
               
           }
       
