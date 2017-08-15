@@ -117,10 +117,6 @@ app.get('/counter', function (req, res) {
       res.send(counter.toString());
 });
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 var names = [];
 app.get('/submit-name/:name', function(req, res) { //URL : /submit-name?name=xxxxxx
     //Get The Names From Request Object
@@ -129,6 +125,10 @@ app.get('/submit-name/:name', function(req, res) { //URL : /submit-name?name=xxx
     names.push(name);
     // JSON : JavaScript Object Notation
     res.send(JSON.stringify(names));
+});
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/:articleName', function (req, res) {
