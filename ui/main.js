@@ -14,7 +14,7 @@ request.onreadystatechange = function()
                     span.innerHTML = counter.toString();
                 } 
             } 
-}; 
+    }; 
 request.open("GET", "http://kogam22.imad.hasura-app.io/counter", true);
 request.send(); 
 console.log('EXECUTED');
