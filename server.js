@@ -164,7 +164,7 @@ app.get('/article/:articleName', function (req, res)
 {
     //articleName == article-one
     //articles[articleName] == {} content object for article
-    
+    var articleName = req.params.articleName;
     
     pool.query("SELECT *FROM article WHERE title = " + req.params.articleName), function(err, result)
     {
@@ -182,7 +182,7 @@ app.get('/article/:articleName', function (req, res)
                     res.send(createTemplate(articleData));
                 }
     };           
-    var articleName = req.params.articleName;
+
 	
 });
 
