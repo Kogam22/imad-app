@@ -19,7 +19,7 @@ app.use(morgan('combined'));
 var articles = {
      'article-one'   : {
     title: 'Article One - Shady Dude',
-    heading: 'ç',
+    heading: 'Article One',
     date: "Aug 5. 2017",
     content: `
             <p>
