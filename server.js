@@ -159,7 +159,6 @@ app.get('/submit-name', function(req, res)
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleName = req.params.articleName;
 app.get('/articles/:articleName', function (req, res) 
 {
     //articleName == article-one
@@ -180,7 +179,7 @@ app.get('/articles/:articleName', function (req, res)
                     var articleData = result.rows[0];
                     res.send(createTemplate(articleData));
                 }
-    };           
+    });           
 
 	
 });
