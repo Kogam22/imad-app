@@ -109,20 +109,22 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/test-db',function(req,res) {
-    //make a query
-    //return a response
-    pool.query('select * from test',function(err,result)
-    //Change res To result And Try
-    {
-        if(err) { res.status(500).send(err.toString()); 
-            
-        } 
-        else { res.send(JSON.stringify(result.rows));
-        //Because You Are Using result Here 
-        }
-        }); 
-    
+app.get('/test-db',function(req,res)
+{
+	//make a query
+		//return a response
+	pool.query('select * from test',function(err,result) //Change res To result And Try
+    { 
+		if(err)
+        {
+			res.status(500).send(err.toString());
+		}
+		else
+        {
+			res.send(JSON.stringify(result.rows)); //Because You Are Using result Here
+		}
+	});
+
 });
 
 /*app.get('/test-db',function(req,result){
