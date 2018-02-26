@@ -4,8 +4,8 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var config ={
-	user: 'ask4mohitdrocker',
-	database: 'ask4mohitdrocker',
+	user: 'kogam22',
+	database: 'kogam22',
 	host: 'db.imad.hasura-app.io:5432', 
 	port: '5432', 
 	password: process.env.DB_PASSWORD
@@ -115,10 +115,10 @@ app.get('/test-db',function(req,res) {
     pool.query('select * from test',function(err,result)
     //Change res To result And Try
     {
-        if(err) { result.status(500).send(err.toString()); 
+        if(err) { res.status(500).send(err.toString()); 
             
         } 
-        else { result.send(JSON.stringify(result.rows));
+        else { res.send(JSON.stringify(result.rows));
         //Because You Are Using result Here 
         }
         }); 
